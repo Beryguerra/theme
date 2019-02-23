@@ -1,0 +1,52 @@
+/*
+Theme name:thetheme
+Author: Bruno Guerra
+Author URI: wwww.site.com
+Version: 1.0
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+a:link,
+a:visited {
+    color: #006ec3;
+}
+
+p {
+    line-height: 1.65em;
+}
+
+/* General layout */
+
+.container {
+    max-width: 920px;
+    margin: 0px;
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+/* Post */
+.post {
+    border-bottom: 2px dotted #bbbbbb;
+}
+
+.post:last-of-type{
+    border-bottom: none;
+}
+/* Header */
+
+.site-header {
+    border-bottom: 2px solid #999;
+}
+
+/* Footer*/
+
+.site-footer {
+    margin-top: 30px;
+    border-top: 2px solid #999;
+}
+
