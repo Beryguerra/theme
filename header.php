@@ -9,7 +9,7 @@
 <body <?php body_class();?>>
 
 <div class="container">
-
+                                        <!-- site header-->
         <header class="site-header">
 
                     <h1><a href="<?php echo home_url();?>"><?php bloginfo('name');?></a></h1>
@@ -18,7 +18,19 @@
                         => <a href="<?php echo home_url();?>"> torna o nome do site um link para a nosso home page
                     -->
                     <h5> <?php bloginfo('description');?> </h5><!--Descricao do site ANOTHER WP SITE-->
+<!--******************************************nav menu tem k ser resgistado no functions.php ************************-->
+                            <nav class="site-nav">
 
+                                    <?php
+                                    $args = array(
+                                        'theme_location' => 'primary',
+                                    );
+                                        
+                                    ?>
+
+                                    <?php wp_nav_menu( $args );?><!-- agarra a nav-->
+                                </nav>
+                        <!-- ************************ fim do nav menu ************************************-->
         </header>
 
 
