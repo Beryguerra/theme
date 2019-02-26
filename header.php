@@ -17,7 +17,17 @@
                     => <?php bloginfo('name');?> nome do site WORDPRESS 
                         => <a href="<?php echo home_url();?>"> torna o nome do site um link para a nosso home page
                     -->
-                    <h5> <?php bloginfo('description');?> </h5><!--Descricao do site ANOTHER WP SITE-->
+                    <h5> <?php bloginfo('description');?> <?php if (is_page( 58) ) {?>
+                               - Thanks for viewing our work
+                        <?php }?> </h5><!--Descricao do site ANOTHER WP SITE-->
+
+<!--
+     PARA ALTERAR ALGO NUMA DAS PAGINA   - condicional logic
+    <?php if (is_page( 58) ) {?> seleciona o ID da pagina nesta caso portfolio
+         thanks for viewing our work...... codigo a ser mudado vai aqui
+    <?php }?> fim do if
+
+-->
 <!--******************************************nav menu tem k ser resgistado no functions.php ************************-->
                             <nav class="site-nav">
 

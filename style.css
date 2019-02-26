@@ -56,7 +56,7 @@ p {
     padding: 0;
 }
 
-.site-nav ul::before, .site-nav ul::after { content: ""; display: table; }
+.site-nav ul:before, .site-nav ul:after { content: ""; display: table; }
 .site-nav ul:after { clear: both;}
 .site-nav ul { *zoom: 1;}
 
@@ -64,3 +64,73 @@ p {
     list-style: none;
     float: left;
 }
+
+/* Site header menu*/
+.site-header nav ul li {
+    margin-right: 5px;
+}
+
+.site-header nav ul li a:link,
+.site-header nav ul li a:visited {
+    display: block;
+    padding: 10px 18px;
+    border: 1px solid #BBB;;
+    border-bottom: none;
+    text-decoration: none;
+}
+
+.site-header nav ul li a:hover {
+    background-color: #ECECEC;
+}
+
+.site-header nav ul li.current-menu-item a:link,
+.site-header nav ul li.current-menu-item a:visited {
+    background-color: #006ec3;
+    color: #FFF;
+}
+
+/* FOOTER menu */
+.site-footer nav ul li {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px dotted #BBB;
+}
+
+/* Page layout */
+article.page h2 {
+    font-size: 300%;
+}
+
+/* 2 column title layout page-portfolio.php*/
+.title-column {
+    width: 30%;
+    float: left;
+}
+
+.text-column {
+    width: 70%;
+    float: right;
+}
+
+/* INFO BOX STYLES*/
+.info-box {
+    width: 30%;
+    float: right;
+    margin: 0 0 30px 30px;
+    padding: 20px;
+    background-color: #EEE;
+}
+
+.info-box h4 {
+    margin-bottom: 6px;
+}
+
+.info-box p {
+    font-size: 85%;
+}
+
+
+
+
+
+
