@@ -47,3 +47,6 @@ function has_children(){
         return count($pages);
 
 }
+/*
+=>$pages = get_pages('child_of=' . $post->ID); get pages e WP funcao, da-nos o child da page k estamos a ver
+*/

@@ -8,6 +8,49 @@
                     => <?php the_title();?> mostra o titulo do post
                     => <a href="<?php the_permalink();?>"> faz do titulo um link 
                 -->
+
+                <!--                    Autor, hora, categorias              -->
+                <p class="post-info"><?php the_time('F jS, Y');
+                ?> | by <a href="<?php get_author_posts_url(get_the_author_meta('ID'));?>"><?php the_author();?></a> Posted in
+                
+                <!--
+        =>?php the_time('F jS, Y');?> da-nos o tempo em k o post foi criado
+        =><a href="<?php get_author_posts_url(get_the_author_meta('ID'));?>"> permite k ao carregar no autor veja-mos posts so dele
+        =><?php the_author();?> da-nos o autor do post
+-->
+
+                <?php
+                /* get categories com link */
+                $categories = get_the_category();
+                $separator = ", ";
+                $output = '';
+                
+                if ($categories) {
+                        foreach($categories as $category){
+                                $output .= '<a href="' . get_category_link( $category->term_id ) .'">' . $category->cat_name . '</a>' . $separator;//.= permite-nos adicionar conteudo a var, k criamos vazia
+                        }
+
+                        echo trim($output, $separator);//echo trim php function
+                }
+                ?>
+
+
+<!-- Funcao para obter categorias sem link
+<?php
+                /* get categories */
+                $categories = get_the_category();
+                $separator = ", ";
+                $output = '';
+                
+                if ($categories) {
+                        foreach($categories as $category){
+                                $output .= $category->cat_name . $separator;//.= permite-nos adicionar conteudo a var, k criamos vazia
+                        }
+
+                        echo trim($output, $separator);//echo trim php function
+                }
+                ?>
+-->
                 <?php the_content();?><!--mostra o conteudo-->
         </article>
 
