@@ -50,3 +50,29 @@ function has_children(){
 /*
 =>$pages = get_pages('child_of=' . $post->ID); get pages e WP funcao, da-nos o child da page k estamos a ver
 */
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Customize excerpt word count length
+function custom_excerpt_length() {
+        return 60;//numero de palavras k queremos k apareca
+} 
+
+add_filter('excerpt_length','custom_excerpt_length');
+/*
+   => add_filter e uma WP function
+   => 'excerpt_length' e o WP filtro k hooka ao add_filter
+*/
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Add featured image support
+
+function learningWordPress_setup() {
+        add_theme_support('post_thumbnails');
+}
+
+add_action('after_setup_theme', 'learningWordPress_setup');
+
+
+

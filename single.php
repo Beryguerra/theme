@@ -51,21 +51,9 @@
                 }
                 ?>
 -->
-          <!-- <?php the_content('Continue Reading &raquo;');?>  mostra o conteudo mas pode ser trocado por 
+          <?php the_content();?><!--mostra o conteudo mas pode ser trocado por 
           the_excerpt para cortar o post em single.php deve ficar the_content e get_the_excerpt no index.php-->
-
-             <!--                   Usar excerpt                  -->
-
-             <?php if($post->post_excerpt) { ?>
-                <p>
-               <?php echo get_the_excerpt();?><!-- funciona como o the_content so k corta o post a meio-->
-               <a href="<?php the_permalink();?>">Continue Reading &raquo;</a>
-               </p>
-
-             <?php } else {
-                     the_content();
-             } ?>
-             <!--               FIM DO excerpt                  -->
+               <!--<?php the_excerpt();?>   funciona como o the_content so k corta o post a meio-->
         </article>
 
     <?php endwhile;?>  <!-- Fim do WHILE LOOP-->
