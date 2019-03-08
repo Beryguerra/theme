@@ -2,7 +2,13 @@
 
 <?php if (have_posts()) : while(have_posts()) : the_post();?><!--para mostar conteudo dos posts-->
 
-        <article class="post">
+<article class="post <?php if(has_post_thumbnail() ) { ?> has-thumbnail <?php } ?>"><!--has-thumbnail vai ser aproveitado para style a thumbnail-->
+
+                <!-- Post thumbnail-->
+                <div class="post-thumbnail">
+                       <a href="<?php the_permalink();?>"> <?php the_post_thumbnail('small-thumbnail');?></a><!-- vai no functions.php-->
+                </div><!--FIM POST THUMBnAIL-->
+
                 <h2><a href="<?php the_permalink();?>"> <?php the_title();?></a></h2>
                 <!--
                     => <?php the_title();?> mostra o titulo do post
@@ -34,7 +40,8 @@
                 }
                 ?>
 
-
+                </p>
+                
 <!-- Funcao para obter categorias sem link
 <?php
                 /* get categories */
@@ -50,9 +57,13 @@
                         echo trim($output, $separator);//echo trim php function
                 }
                 ?>
--->
-          <!-- <?php the_content('Continue Reading &raquo;');?>  mostra o conteudo mas pode ser trocado por 
-          the_excerpt para cortar o post em single.php deve ficar the_content e get_the_excerpt no index.php-->
+                                   FIM DA FUNCAO CATEGORIAS
+--> 
+          <!--
+                 <?php the_content('Continue Reading &raquo;');?>  mostra o conteudo mas pode ser trocado por 
+                the_excerpt para cortar o post em single.php deve ficar the_content e get_the_excerpt no index.php
+          -->
+
 
              <!--                   Usar excerpt                  -->
 

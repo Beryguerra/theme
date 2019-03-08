@@ -3,6 +3,7 @@
 <?php if (have_posts()) : while(have_posts()) : the_post();?><!--para mostar conteudo dos posts-->
 
         <article class="post">
+                
                 <h2><a href="<?php the_permalink();?>"> <?php the_title();?></a></h2>
                 <!--
                     => <?php the_title();?> mostra o titulo do post
@@ -51,7 +52,12 @@
                 }
                 ?>
 -->
-          <?php the_content();?><!--mostra o conteudo mas pode ser trocado por 
+                <!--                 para output a feature image e controlado pelo functions.php    -->
+                <?php the_post_thumbnail('banner-image');?> 
+                <!--              FIM DO OUTPUT DA FEATURED IMAGE -- >
+-->
+                
+          <?php the_content();?> <!-- mostra o conteudo mas pode ser trocado por 
           the_excerpt para cortar o post em single.php deve ficar the_content e get_the_excerpt no index.php-->
                <!--<?php the_excerpt();?>   funciona como o the_content so k corta o post a meio-->
         </article>
